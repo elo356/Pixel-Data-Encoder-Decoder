@@ -1,0 +1,8 @@
+C:\Users\elian\OneDrive\Documents\Programacion\C# Programming\ImgPixelHide\ImgPixelHide\bin\Debug\ImgPixelHide.exe.config
+C:\Users\elian\OneDrive\Documents\Programacion\C# Programming\ImgPixelHide\ImgPixelHide\bin\Debug\ImgPixelHide.exe
+C:\Users\elian\OneDrive\Documents\Programacion\C# Programming\ImgPixelHide\ImgPixelHide\bin\Debug\ImgPixelHide.pdb
+C:\Users\elian\OneDrive\Documents\Programacion\C# Programming\ImgPixelHide\ImgPixelHide\obj\Debug\ImgPixelHide.csproj.AssemblyReference.cache
+C:\Users\elian\OneDrive\Documents\Programacion\C# Programming\ImgPixelHide\ImgPixelHide\obj\Debug\ImgPixelHide.csproj.SuggestedBindingRedirects.cache
+C:\Users\elian\OneDrive\Documents\Programacion\C# Programming\ImgPixelHide\ImgPixelHide\obj\Debug\ImgPixelHide.csproj.CoreCompileInputs.cache
+C:\Users\elian\OneDrive\Documents\Programacion\C# Programming\ImgPixelHide\ImgPixelHide\obj\Debug\ImgPixelHide.exe
+C:\Users\elian\OneDrive\Documents\Programacion\C# Programming\ImgPixelHide\ImgPixelHide\obj\Debug\ImgPixelHide.pdb
