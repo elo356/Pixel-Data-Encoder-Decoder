@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ImgPixelHide.exe" version="1.0.0.0" publicKeyToken="36448318e7ab3899" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ImgPixelHide" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="ImgPixelHide.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ImgPixelHide.exe" size="10152">
+      <assemblyIdentity name="ImgPixelHide" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>0reMqi97r4cD1uaoQ4L1BO5l5I9fGpcIBT4FYo3pQaw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="ImgPixelHide.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=ELIAN\elian" issuerKeyHash="83a09a9abb5e0d6f46f9064b62d73c36426c2336" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>UT5IzHZBUuFXS23d4L25dbjtBE+UI7SX7mDuubo1XwM=</DigestValue></Reference></SignedInfo><SignatureValue>SMCmhfzgaSuuLPy8PeLmQBIMOFwx6rH926e8yj7KkZxGEP05Ax9QN5JOR+xFut2VUfw6GkS3NyCutgHWUMKcgBRfVbzG7gUs81jWHevP2f+S89YuE8Jj42W5QYH9BQSuSJBIdOtdMibVSxlvxRJ2EDQM8mnsz8kITiowMW5jPU4=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>wquwF/Y6Sd9Mg3rWEcXLC8gPjV4DoZA7PBAdm4TrzSf5cufWaWVKvnrRpGYPuoaEI7YvEyXyapNuQPZIscmL7sOtRf0zJzzfJrqpQwkNSFKdsbHjuly0w5DXYeCMk0kU9CBfcw+LzShV1u2rnvWw64ydL4TLwkqX3s8a32bkHuE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="035f35bab9ee60ee97b423944f04edb875b9bde0dd6d4b57e1524176cc483e51" Description="" Url=""><as:assemblyIdentity name="ImgPixelHide.exe" version="1.0.0.0" publicKeyToken="36448318e7ab3899" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=ELIAN\elian</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>FapM5xezVwOKl20FxjpuCMSREyRNAXo05ssa7QXO9U0=</DigestValue></Reference></SignedInfo><SignatureValue>dDUwo/KUQUrQBgK9GdiiQO2c6+gWrkqYMccy0B8dZjxMPxbJr43dNQdVS0Gd19LlK5EbkoDyuwAhyMcTzXBC8LfzlotKbuHAAyhQTtNM437VlZ3E/DdL2zw2hzehiTa0op5zvrrgi+WFmvKKRDky4UlIuJkbfkWXn+Lx2qAEARk=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>wquwF/Y6Sd9Mg3rWEcXLC8gPjV4DoZA7PBAdm4TrzSf5cufWaWVKvnrRpGYPuoaEI7YvEyXyapNuQPZIscmL7sOtRf0zJzzfJrqpQwkNSFKdsbHjuly0w5DXYeCMk0kU9CBfcw+LzShV1u2rnvWw64ydL4TLwkqX3s8a32bkHuE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBxTCCAS6gAwIBAgIQeruDRLgZQLZFeSR0cEJT2DANBgkqhkiG9w0BAQsFADAhMR8wHQYDVQQDHhYARQBMAEkAQQBOAFwAZQBsAGkAYQBuMB4XDTI0MTAyMDAxMzAxNFoXDTI1MTAyMDA3MzAxNFowITEfMB0GA1UEAx4WAEUATABJAEEATgBcAGUAbABpAGEAbjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAwquwF/Y6Sd9Mg3rWEcXLC8gPjV4DoZA7PBAdm4TrzSf5cufWaWVKvnrRpGYPuoaEI7YvEyXyapNuQPZIscmL7sOtRf0zJzzfJrqpQwkNSFKdsbHjuly0w5DXYeCMk0kU9CBfcw+LzShV1u2rnvWw64ydL4TLwkqX3s8a32bkHuECAwEAATANBgkqhkiG9w0BAQsFAAOBgQBsEKm7x+zfcRc7If5iESLP4B1yTwNvR52bSEWhNV16EM+uDlikPjIdoj8LuJ9Y8C5WaxwNZ20xjz+82o7T11toylRI7CY/vMw8itBJVbVus6wJL4U7J5ejYoBHiaeT0Cl5m5CdJ7Lu3PDp7L9LMUxR271Lx13+yC7p6j1GsGYm7Q==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

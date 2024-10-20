@@ -6,3 +6,7 @@ C:\Users\elian\OneDrive\Documents\Programacion\C# Programming\ImgPixelHide\ImgPi
 C:\Users\elian\OneDrive\Documents\Programacion\C# Programming\ImgPixelHide\ImgPixelHide\obj\Debug\ImgPixelHide.csproj.CoreCompileInputs.cache
 C:\Users\elian\OneDrive\Documents\Programacion\C# Programming\ImgPixelHide\ImgPixelHide\obj\Debug\ImgPixelHide.exe
 C:\Users\elian\OneDrive\Documents\Programacion\C# Programming\ImgPixelHide\ImgPixelHide\obj\Debug\ImgPixelHide.pdb
+C:\Users\elian\OneDrive\Documents\Programacion\C# Programming\ImgPixelHide\ImgPixelHide\bin\Debug\ImgPixelHide.exe.manifest
+C:\Users\elian\OneDrive\Documents\Programacion\C# Programming\ImgPixelHide\ImgPixelHide\bin\Debug\ImgPixelHide.application
+C:\Users\elian\OneDrive\Documents\Programacion\C# Programming\ImgPixelHide\ImgPixelHide\obj\Debug\ImgPixelHide.exe.manifest
+C:\Users\elian\OneDrive\Documents\Programacion\C# Programming\ImgPixelHide\ImgPixelHide\obj\Debug\ImgPixelHide.application

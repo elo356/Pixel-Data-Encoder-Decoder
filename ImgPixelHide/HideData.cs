@@ -160,6 +160,5 @@ namespace ImgPixelHide
             }
             SaveImage(Path, image);
         }
-
     }
 }

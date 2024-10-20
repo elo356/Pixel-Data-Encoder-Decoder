@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
-using System.Text;
 
 namespace ImgPixelHide
 {
@@ -17,66 +17,70 @@ namespace ImgPixelHide
 
         Bitmap LoadImage(string imgPath)
         {
+            Console.ForegroundColor = ConsoleColor.Green; // Change console color
+            Console.WriteLine("Image loaded successfully");
+            Console.ResetColor(); // Reset console color
             return new Bitmap(imgPath);
         }
 
-        public string ReadDataFromPixels()
+        public void ReadDataFromPixels()
         {
             Bitmap image = Img;
+            int bitCounter = 0;
+            string bitLengthRecovered = "";
+            string msgRecoveredBits = "";
 
-            // Read the length of the message (16 bits)
-            string lengthBits = "";
-            for (int y = 0; y < 2; y++) // Read from the first two pixels
+            for (int y = 0; y < image.Height; y++)
             {
-                for (int x = 0; x < 1; x++) // Read one pixel from each row
+                for (int x = 0; x < image.Width; x++)
                 {
                     Color pixel = image.GetPixel(x, y);
-                    lengthBits += Convert.ToString(pixel.R, 2).PadLeft(8, '0')[7]; // Get LSB of R
-                    lengthBits += Convert.ToString(pixel.G, 2).PadLeft(8, '0')[7]; // Get LSB of G
-                    lengthBits += Convert.ToString(pixel.B, 2).PadLeft(8, '0')[7]; // Get LSB of B
+
+                    string R = Convert.ToString(pixel.R, 2).PadLeft(8, '0');
+                    string G = Convert.ToString(pixel.G, 2).PadLeft(8, '0');
+                    string B = Convert.ToString(pixel.B, 2).PadLeft(8, '0');
+
+                    List<string> rgb = new List<string> { R, G, B };
+
+                    for (int i = 0; i < rgb.Count; i++)
+                    {
+                        char lsbBit = rgb[i][rgb[i].Length - 1]; 
+
+                        if (bitCounter < 16)
+                        {
+                            bitLengthRecovered += lsbBit.ToString();
+                        }
+                        else if (bitCounter >= 16 && bitCounter < Convert.ToInt32(bitLengthRecovered, 2))
+                        {
+                            msgRecoveredBits += lsbBit.ToString();
+                        }
+                        else
+                        {
+                            break; 
+                        }
+                        bitCounter++;
+                    }
                 }
             }
 
-            // Convert lengthBits from binary to an integer
-            int messageLength = Convert.ToInt32(lengthBits, 2);
-            Console.WriteLine($"Length of the message: {messageLength} characters.");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine($"Size of the recovered message: {bitLengthRecovered.Length} bits");
+            Console.WriteLine($"Recovered bits: {msgRecoveredBits}");
+            Console.ResetColor();
 
-            // Read the actual message based on the determined length
-            string messageBin = "";
-            int bitsRead = 0;
+            string decodedMsg = "";
 
-            for (int y = 0; y < image.Height && bitsRead < messageLength * 8; y++)
+            for (int i = 0; i <= msgRecoveredBits.Length - 8; i += 8)
             {
-                for (int x = 0; x < image.Width && bitsRead < messageLength * 8; x++)
-                {
-                    Color pixel = image.GetPixel(x, y);
-                    // Read LSBs from RGB components
-                    messageBin += Convert.ToString(pixel.R, 2).PadLeft(8, '0')[7]; // Get LSB of R
-                    messageBin += Convert.ToString(pixel.G, 2).PadLeft(8, '0')[7]; // Get LSB of G
-                    messageBin += Convert.ToString(pixel.B, 2).PadLeft(8, '0')[7]; // Get LSB of B
-                }
+                string bin = msgRecoveredBits.Substring(i, 8);
+                int binToInt = Convert.ToInt32(bin, 2);
+                decodedMsg += (char)binToInt;
             }
 
-            // Check if we read enough bits
-            if (messageBin.Length < messageLength * 8)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Warning: Not enough bits read for the message.");
-                Console.ResetColor();
-                return string.Empty; // Return empty if not enough bits
-            }
-
-            // Convert the binary message to bytes and then to a string
-            byte[] messageBytes = new byte[messageLength];
-
-            for (int i = 0; i < messageLength; i++)
-            {
-                // Get 8 bits for each byte
-                string byteBin = messageBin.Substring(i * 8, 8);
-                messageBytes[i] = Convert.ToByte(byteBin, 2);
-            }
-
-            return Encoding.UTF8.GetString(messageBytes); // Convert bytes back to string
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Decoded message: ");
+            Console.WriteLine(decodedMsg);
+            Console.ResetColor();
         }
     }
 }
